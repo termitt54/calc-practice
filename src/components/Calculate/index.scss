@@ -1,0 +1,29 @@
+.calculate {
+  width: 100%;
+  max-width: 31rem;
+  height: 48rem;
+
+  background-color: black;
+  border-radius: 2rem;
+  padding: 2rem;
+
+  &__screen {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    font-size: 3rem;
+    font-weight: 500;
+    color: white;
+
+    padding: 2rem 1rem;
+    border-bottom: 1px solid orange;
+  }
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 2rem 0rem;
+  }
+}

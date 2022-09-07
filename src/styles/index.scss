@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 144rem;
+  padding: 2rem;
+}
+
+.btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 6rem;
+
+  font-size: 2rem;
+  font-weight: 600;
+
+  border-radius: 50%;
+
+  &_ac {
+    background-color: rgb(255, 0, 0);
+    color: white;
+
+    &:active {
+      background-color: rgb(255, 100, 100);
+    }
+  }
+
+  &_number {
+    background-color: rgb(50, 50, 50);
+    color: white;
+
+    &:active {
+      background-color: rgb(85, 85, 85);
+    }
+  }
+
+  &_operator {
+    grid-column: 4/ -1;
+    background-color: rgb(255, 165, 0);
+    color: white;
+
+    &:active {
+      background-color: rgb(255, 199, 95);
+    }
+  }
+
+  &_result {
+    grid-column: 3/-1;
+    border-radius: 5rem;
+  }
+
+  &_one,
+  &_two,
+  &_three {
+    grid-row: 4;
+  }
+
+  &_four,
+  &_five,
+  &_six {
+    grid-row: 3;
+  }
+
+  &_seven,
+  &_eight,
+  &_nine {
+    grid-row: 2;
+  }
+
+  &_zero,
+  &_point {
+    grid-row: 5;
+  }
+}
