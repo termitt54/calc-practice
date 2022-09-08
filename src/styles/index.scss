@@ -32,8 +32,8 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  width: 100%;
+  border: none;
+  width: 6rem;
   height: 6rem;
 
   font-size: 2rem;
@@ -60,7 +60,6 @@ html {
   }
 
   &_operator {
-    grid-column: 4/ -1;
     background-color: rgb(255, 165, 0);
     color: white;
 
@@ -70,30 +69,6 @@ html {
   }
 
   &_result {
-    grid-column: 3/-1;
     border-radius: 5rem;
-  }
-
-  &_one,
-  &_two,
-  &_three {
-    grid-row: 4;
-  }
-
-  &_four,
-  &_five,
-  &_six {
-    grid-row: 3;
-  }
-
-  &_seven,
-  &_eight,
-  &_nine {
-    grid-row: 2;
-  }
-
-  &_zero,
-  &_point {
-    grid-row: 5;
   }
 }

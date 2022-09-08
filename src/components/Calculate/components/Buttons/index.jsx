@@ -1,30 +1,36 @@
 import React from "react";
 
-export const Buttons = ({number, operator, clickNumber, clickOperator, equils, clearAll, negative, percent}) => {
-    return (
-        <div className="buttons calculate__buttons">
-        <button onClick={clearAll} className="btn btn_ac">AC</button>
-        <button onClick={negative} className="btn">±</button>
-        <button onClick={percent} className="btn">%</button>
+export const Buttons = ({ onClick, onOperatorClick }) => {
+  const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "."];
+  const operators = ["ac", "±", "%", "÷", "x", "-", "+", "="];
 
-        {operator.map(function (item) {
-          return <button value={item.value} onClick={clickOperator} className="btn btn_operator">{item.value}</button>;
-        })}
+  return (
+    <div className="buttons calculate__buttons">
+      {operators.map(function (item) {
+        return (
+          <button
+            key={item + "-operator"}
+            value={item}
+            onClick={(e) => onOperatorClick(e.target.value)}
+            className="btn btn_operator"
+          >
+            {item}
+          </button>
+        );
+      })}
 
-        <button onClick={equils} className="btn btn_operator btn_result">=</button>
-
-        {number.map(function (item) {
-          return (
-            <button
-              value={item.value}
-              onClick={clickNumber}
-              className={item.class}
-            >
-              {item.value}
-            </button>
-          );
-        })}
-
-      </div>
-    )
-}
+      {numbers.map(function (item) {
+        return (
+          <button
+            key={item + "-number"}
+            value={item}
+            onClick={(e) => onClick(e.target.value)}
+            className="btn btn_number"
+          >
+            {item}
+          </button>
+        );
+      })}
+    </div>
+  );
+};
